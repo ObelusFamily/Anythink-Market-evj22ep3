@@ -5,15 +5,14 @@
  * See lib/config/default.js in the agent distribution for a more complete
  * description of configuration variables and their potential values.
  */
-exports.config = {
+
+
+export const config = {
   /**
    * Array of application names.
    */
-  app_name: ['My Application'],
-  /**
-   * Your New Relic license key.
-   */
-  license_key: 'license key here',
+  app_name: ['Observability-1T'],
+  
   logging: {
     /**
      * Level at which to log. 'trace' is most useful to New Relic when diagnosing
@@ -37,6 +36,7 @@ exports.config = {
      *
      * @name NEW_RELIC_ATTRIBUTES_EXCLUDE
      */
+    
     exclude: [
       'request.headers.cookie',
       'request.headers.authorization',
