@@ -4,7 +4,7 @@ import { Provider } from "react-redux";
 import React from "react";
 import { store, history } from "./store";
 import { ThemeProvider } from 'styled-components';
-
+import { GlobalStyle } from "src/styles/GlobalStyle.js";
 import { Route, Switch } from "react-router-dom";
 import { ConnectedRouter } from "react-router-redux";
 
@@ -14,9 +14,10 @@ ReactDOM.render(
   <Provider store={store}>
     <ConnectedRouter history={history}>
       <ThemeProvider>
-        <Switch>
-          <Route path="/" component={App} />
-        </Switch>
+        <GlobalStyle whiteColor />
+          <Switch>
+            <Route path="/" component={App} />
+          </Switch>
       </ThemeProvider>
     </ConnectedRouter>
   </Provider>,
