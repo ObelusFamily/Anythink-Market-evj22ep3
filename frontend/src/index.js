@@ -13,7 +13,7 @@ import App from "./components/App";
 ReactDOM.render(
   <Provider store={store}>
     <ConnectedRouter history={history}>
-      <ThemeProvider theme={theme}>
+      <ThemeProvider>
         <Switch>
           <Route path="/" component={App} />
         </Switch>
